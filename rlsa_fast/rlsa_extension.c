@@ -83,7 +83,7 @@ int* get_vertical_smeared_image(int* image, long int rows, long int cols, int ra
     {
          int j = 0;
         // find the first pixel in this image which is 0
-        while(image[j * cols + i] != 0 && j < rows)
+        while(j < rows && image[j * cols + i] != 0 )
         {
             // copy the value of this pixel in the smeared image variable
             smeared[j * cols + i] = 255;
