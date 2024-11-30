@@ -204,22 +204,22 @@ PyObject* rlsa_smear_c(PyObject* self, PyObject* args)
 
 // method definitions
 static PyMethodDef methods[] = {
-  { "rlsa_fast", rlsa_smear_c, METH_VARARGS, "performs run-length smearing on the image (horizontal and/or vertical)"},
+  { "rlsafast", rlsa_smear_c, METH_VARARGS, "performs run-length smearing on the image (horizontal and/or vertical)"},
   { NULL, NULL, 0, NULL }
 };
 
 // module definition
-static struct PyModuleDef rlsa_fast = {
+static struct PyModuleDef rlsafast = {
     PyModuleDef_HEAD_INIT,
-    "rlsa_fast",
+    "rlsafast",
     "A Python module that caculates the run-length smearing of an image and returns it",
     -1,
     methods
 };
 
 // create the module
-PyMODINIT_FUNC PyInit_rlsa_fast(void) {
+PyMODINIT_FUNC PyInit_rlsafast(void) {
   Py_Initialize();
   import_array();
-  return PyModule_Create(&rlsa_fast);
+  return PyModule_Create(&rlsafast);
 }
